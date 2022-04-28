@@ -1,5 +1,5 @@
-name: training_flutter
-description: A new Flutter project.
+name: money_lover_flutter
+description: Money Lover with Flutter
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  flutter_svg: ^0.23.0+1
+  hexcolor: ^2.0.5
   flutter_test:
     sdk: flutter
 
@@ -51,7 +53,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
+  assets:
+    - assets/ic_wallet_1.svg
+    - assets/ic_linked_wallet.svg
+    - assets/ic_wallet_credit.svg
+    - assets/ic_wallet_goal.svg
+    - assets/ic_content_1.svg
+    - assets/ic_content_2.svg
+    - assets/ic_help.svg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
