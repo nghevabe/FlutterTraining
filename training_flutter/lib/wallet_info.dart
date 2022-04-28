@@ -417,7 +417,7 @@ class ItemBottomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.only(top: 4.0, bottom: 4.0),
+      padding: EdgeInsets.only(top: 12.0, bottom: 12.0),
       margin: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
       decoration: BoxDecoration(
           color: Colors.green,
