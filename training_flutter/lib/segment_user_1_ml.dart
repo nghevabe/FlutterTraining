@@ -88,6 +88,7 @@ Widget _titleQuestion() {
     alignment: Alignment.center,
     margin: const EdgeInsets.only(left: 20.0 ,top: 16.0, right: 20.0),
     child: Text("Mục tiêu tài chính hiện tại của bạn là gì?",
+        textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 24.0,
           color: HexColor("#1D1D1D"),
@@ -100,6 +101,7 @@ Widget _contendQuestion() {
     alignment: Alignment.center,
     margin: EdgeInsets.only(left: 20.0 ,top: 4.0, right: 20.0),
     child: Text("Chọn một mục tiêu quan trọng nhất. Bạn có thể khám phá những mục tiêu khác bất cứ lúc nào.",
+        textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 14.0,
           color: HexColor("#1D1D1D"),
@@ -121,7 +123,7 @@ class ItemAnswer extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border.all(color: HexColor("#E4E4E4"), width: 2.0),
           borderRadius: BorderRadius.all(Radius.circular(16))),
-      margin: EdgeInsets.only(left: 48.0, top: 24.0, right: 48.0),
+      margin: EdgeInsets.only(left: 20.0, top: 28.0, right: 20.0),
       padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
       child: Row(
         children: [
@@ -135,7 +137,7 @@ class ItemAnswer extends StatelessWidget {
             margin: EdgeInsets.only(left: 8.0),
             child: Text(contend,
                 style: TextStyle(
-                  fontSize: 14.0,
+                  fontSize: 16.0,
                   color: HexColor("#444444"),
                 )),
           )
@@ -143,48 +145,4 @@ class ItemAnswer extends StatelessWidget {
       ),
     );
   }
-}
-
-class _WalletInfoState extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      margin: EdgeInsets.only(top: 18.0),
-      child: Row(
-        children: [
-          Container(
-            width: MediaQuery.of(context).size.width * 0.48,
-            height: 1.0,
-            margin: EdgeInsets.only(right: 20.0),
-            color: HexColor("#848586"),
-          ),
-          Text("OR",
-              style: TextStyle(
-                fontSize: 20.0,
-                color: HexColor("#848586"),
-              )),
-          Expanded(
-            child: Container(
-              height: 1.0,
-              margin: EdgeInsets.only(left: 20.0),
-              color: HexColor("#848586"),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-Widget _loginForm() {
-  return Container(
-    alignment: Alignment.center,
-    margin: EdgeInsets.only(top: 8.0),
-    child: Text("We’ll never post without your permission",
-        style: TextStyle(
-          fontSize: 14.0,
-          color: HexColor("#848586"),
-        )),
-  );
 }
