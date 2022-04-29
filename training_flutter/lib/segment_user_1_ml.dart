@@ -46,7 +46,6 @@ class LoginBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        _header(),
         _titlePage(),
         _titleQuestion(),
         _contendQuestion(),
@@ -87,7 +86,7 @@ Widget _titlePage() {
 Widget _titleQuestion() {
   return Container(
     alignment: Alignment.center,
-    margin: EdgeInsets.only(top: 16.0),
+    margin: const EdgeInsets.only(left: 20.0 ,top: 16.0, right: 20.0),
     child: Text("Mục tiêu tài chính hiện tại của bạn là gì?",
         style: TextStyle(
           fontSize: 24.0,
@@ -99,7 +98,7 @@ Widget _titleQuestion() {
 Widget _contendQuestion() {
   return Container(
     alignment: Alignment.center,
-    margin: EdgeInsets.only(top: 4.0),
+    margin: EdgeInsets.only(left: 20.0 ,top: 4.0, right: 20.0),
     child: Text("Chọn một mục tiêu quan trọng nhất. Bạn có thể khám phá những mục tiêu khác bất cứ lúc nào.",
         style: TextStyle(
           fontSize: 14.0,
