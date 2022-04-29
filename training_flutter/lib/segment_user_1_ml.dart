@@ -99,7 +99,7 @@ Widget _titleQuestion() {
 Widget _contendQuestion() {
   return Container(
     alignment: Alignment.center,
-    margin: EdgeInsets.only(left: 20.0 ,top: 4.0, right: 20.0),
+    margin: EdgeInsets.only(left: 20.0 ,top: 4.0, right: 20.0, bottom: 28.0),
     child: Text("Chọn một mục tiêu quan trọng nhất. Bạn có thể khám phá những mục tiêu khác bất cứ lúc nào.",
         textAlign: TextAlign.center,
         style: TextStyle(
@@ -123,7 +123,7 @@ class ItemAnswer extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border.all(color: HexColor("#E4E4E4"), width: 2.0),
           borderRadius: BorderRadius.all(Radius.circular(16))),
-      margin: EdgeInsets.only(left: 20.0, top: 28.0, right: 20.0),
+      margin: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 12.0),
       padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
       child: Row(
         children: [
