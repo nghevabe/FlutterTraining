@@ -61,6 +61,13 @@ flutter:
     - assets/ic_content_1.svg
     - assets/ic_content_2.svg
     - assets/ic_help.svg
+    - assets/ic_item_2.png
+    - assets/ic_item_1.png
+    - assets/ic_item_2.png
+    - assets/ic_item_3.png
+    - assets/ic_item_4.png
+    - assets/ic_item_5.png
+    - assets/ic_item_6.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

@@ -51,13 +51,14 @@ class LoginBody extends StatelessWidget {
         _loginWithFacebook(),
         _loginWithGoogle(),
         _loginWithApple(),
-        _titlePermission()
+        _titlePermission(),
+        _WalletInfoState()
       ],
     );
   }
 }
 
-Widget _header(){
+Widget _header() {
   return Container(
     alignment: Alignment.topLeft,
     margin: const EdgeInsets.only(left: 8.0, top: 8.0),
@@ -68,26 +69,23 @@ Widget _header(){
   );
 }
 
-Widget _title(){
+Widget _title() {
   return Container(
     alignment: Alignment.center,
     margin: EdgeInsets.only(top: 32.0),
-    child: const Text(
-        "Đăng nhập",
+    child: const Text("Đăng nhập",
         style: TextStyle(
           fontSize: 24.0,
           color: Colors.black,
-        )
-    ),
+        )),
   );
 }
 
-Widget _loginWithFacebook(){
+Widget _loginWithFacebook() {
   return Container(
     alignment: Alignment.center,
     decoration: BoxDecoration(
-        border: Border.all(color: HexColor("#1877f2"),
-        width: 2.0),
+        border: Border.all(color: HexColor("#1877f2"), width: 2.0),
         borderRadius: BorderRadius.all(Radius.circular(4))),
     margin: EdgeInsets.only(left: 48.0, top: 24.0, right: 48.0),
     padding: EdgeInsets.only(left: 6.0, top: 6.0, bottom: 6.0),
@@ -99,25 +97,22 @@ Widget _loginWithFacebook(){
         ),
         Container(
           margin: EdgeInsets.only(left: 24.0),
-          child: Text(
-              "Connect with Facebook",
+          child: Text("Connect with Facebook",
               style: TextStyle(
                 fontSize: 14.0,
                 color: HexColor("#1877f2"),
-              )
-          ),
+              )),
         )
       ],
     ),
   );
 }
 
-Widget _loginWithGoogle(){
+Widget _loginWithGoogle() {
   return Container(
     alignment: Alignment.center,
     decoration: BoxDecoration(
-        border: Border.all(color: HexColor("#fd3e3e"),
-            width: 2.0),
+        border: Border.all(color: HexColor("#fd3e3e"), width: 2.0),
         borderRadius: BorderRadius.all(Radius.circular(4))),
     margin: EdgeInsets.only(left: 48.0, top: 12.0, right: 48.0),
     padding: EdgeInsets.only(left: 6.0, top: 6.0, bottom: 6.0),
@@ -129,26 +124,22 @@ Widget _loginWithGoogle(){
         ),
         Container(
           margin: EdgeInsets.only(left: 24.0),
-          child: Text(
-              "Connect with Facebook",
+          child: Text("Connect with Facebook",
               style: TextStyle(
                 fontSize: 14.0,
                 color: HexColor("#fd3e3e"),
-              )
-          ),
+              )),
         )
       ],
     ),
   );
 }
 
-
-Widget _loginWithApple(){
+Widget _loginWithApple() {
   return Container(
     alignment: Alignment.center,
     decoration: BoxDecoration(
-        border: Border.all(color: HexColor("#000000"),
-            width: 2.0),
+        border: Border.all(color: HexColor("#000000"), width: 2.0),
         borderRadius: BorderRadius.all(Radius.circular(4))),
     margin: EdgeInsets.only(left: 48.0, top: 12.0, right: 48.0),
     padding: EdgeInsets.only(left: 6.0, top: 6.0, bottom: 6.0),
@@ -160,30 +151,69 @@ Widget _loginWithApple(){
         ),
         Container(
           margin: EdgeInsets.only(left: 24.0),
-          child: Text(
-              "Connect with Facebook",
+          child: Text("Connect with Facebook",
               style: TextStyle(
                 fontSize: 14.0,
                 color: HexColor("#000000"),
-              )
-          ),
+              )),
         )
       ],
     ),
   );
 }
 
-Widget _titlePermission(){
+Widget _titlePermission() {
   return Container(
     alignment: Alignment.center,
     margin: EdgeInsets.only(top: 8.0),
-    child: Text(
-      "We’ll never post without your permission",
-      style: TextStyle(
-        fontSize: 14.0,
-        color: HexColor("#848586"),
-      )
-    ),
+    child: Text("We’ll never post without your permission",
+        style: TextStyle(
+          fontSize: 14.0,
+          color: HexColor("#848586"),
+        )),
   );
 }
 
+class _WalletInfoState extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      margin: EdgeInsets.only(top: 18.0),
+      child: Row(
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width * 0.48,
+            height: 1.0,
+            margin: EdgeInsets.only(right: 20.0),
+            color: HexColor("#848586"),
+          ),
+          Text("OR",
+              style: TextStyle(
+                fontSize: 20.0,
+                color: HexColor("#848586"),
+              )),
+          Expanded(
+            child: Container(
+              height: 1.0,
+              margin: EdgeInsets.only(left: 20.0),
+              color: HexColor("#848586"),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+Widget _loginForm() {
+  return Container(
+    alignment: Alignment.center,
+    margin: EdgeInsets.only(top: 8.0),
+    child: Text("We’ll never post without your permission",
+        style: TextStyle(
+          fontSize: 14.0,
+          color: HexColor("#848586"),
+        )),
+  );
+}
