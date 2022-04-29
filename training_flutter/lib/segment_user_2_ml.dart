@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'segment_user_2_ml.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
-  runApp(SegmentUser());
+  runApp(SegmentUser2());
 }
 
-class SegmentUser extends StatelessWidget {
+class SegmentUser2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -48,20 +48,18 @@ class LoginBody extends StatelessWidget {
       children: <Widget>[
         _titlePage(),
         _titleQuestion(),
-        _contendQuestion(),
         ItemAnswer(
-            urlImage: "assets/ic_item_1.png",
-            contend: "Ghi chép các khoản thu, chi"),
+            urlImage: "assets/ic_smile_noactive.png",
+            contend: "Ghi chép đầy đủ và thường xuyên"),
         ItemAnswer(
-            urlImage: "assets/ic_item_2.png",
-            contend: "Theo dõi các khoản vay nợ"),
+            urlImage: "assets/ic_smile2_noactive.png",
+            contend: "Có ghi chép, nhưng chưa đầy đủ và thường xuyên"),
         ItemAnswer(
-            urlImage: "assets/ic_item_3.png", contend: "Cắt giảm chi tiêu"),
-        ItemAnswer(urlImage: "assets/ic_item_4.png", contend: "Tiết kiệm"),
+            urlImage: "assets/ic_sad_noactive.png",
+            contend: "Đã nghĩ tới, nhưng chưa thực hiện việc ghi chép"),
         ItemAnswer(
-            urlImage: "assets/ic_item_5.png",
-            contend: "Quản lý tiền ở một nơi"),
-        ItemAnswer(urlImage: "assets/ic_item_6.png", contend: "Mục tiêu khác"),
+            urlImage: "assets/ic_sad2_noactive.png",
+            contend: "Chưa thực hiện việc ghi chép"),
       ],
     );
   }
@@ -82,7 +80,7 @@ Widget _titlePage() {
   return Container(
     alignment: Alignment.center,
     margin: EdgeInsets.only(top: 32.0),
-    child: const Text("Bước 1/5",
+    child: const Text("Bước 2/5",
         style: TextStyle(
           fontSize: 16.0,
           color: Colors.black,
@@ -93,8 +91,9 @@ Widget _titlePage() {
 Widget _titleQuestion() {
   return Container(
     alignment: Alignment.center,
-    margin: const EdgeInsets.only(left: 20.0, top: 16.0, right: 20.0),
-    child: Text("Mục tiêu tài chính hiện tại của bạn là gì?",
+    margin:
+        const EdgeInsets.only(left: 20.0, top: 16.0, right: 20.0, bottom: 60.0),
+    child: Text("Bạn có thường xuyên ghi chép chi tiêu của mình không?",
         textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 24.0,
@@ -126,37 +125,30 @@ class ItemAnswer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-        child: Container(
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              border: Border.all(color: HexColor("#E4E4E4"), width: 2.0),
-              borderRadius: BorderRadius.all(Radius.circular(16))),
-          margin: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 12.0),
-          padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
-          child: Row(
-            children: [
-              Container(
-                width: 40.0,
-                height: 40.0,
-                child: Image(image: AssetImage(urlImage)),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 8.0),
-                child: Text(contend,
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      color: HexColor("#444444"),
-                    )),
-              )
-            ],
+    return Container(
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+          border: Border.all(color: HexColor("#E4E4E4"), width: 2.0),
+          borderRadius: BorderRadius.all(Radius.circular(16))),
+      margin: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 12.0),
+      padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
+      child: Row(
+        children: [
+          Container(
+            width: 40.0,
+            height: 40.0,
+            child: Image(image: AssetImage(urlImage)),
           ),
-        ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => SegmentUser2()),
-          );
-        });
+          Container(
+            margin: EdgeInsets.only(left: 8.0),
+            child: Text(contend,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: HexColor("#444444"),
+                )),
+          )
+        ],
+      ),
+    );
   }
 }
