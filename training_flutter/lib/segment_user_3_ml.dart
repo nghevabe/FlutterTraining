@@ -3,10 +3,10 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
-  runApp(SegmentUser2());
+  runApp(SegmentUser3());
 }
 
-class SegmentUser2 extends StatelessWidget {
+class SegmentUser3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -80,7 +80,7 @@ Widget _titlePage() {
   return Container(
     alignment: Alignment.center,
     margin: EdgeInsets.only(top: 32.0),
-    child: const Text("Bước 2/5",
+    child: const Text("Bước 3/4",
         style: TextStyle(
           fontSize: 16.0,
           color: Colors.black,
@@ -92,7 +92,7 @@ Widget _titleQuestion() {
   return Container(
     alignment: Alignment.center,
     margin:
-        const EdgeInsets.only(left: 20.0, top: 16.0, right: 20.0, bottom: 60.0),
+    const EdgeInsets.only(left: 20.0, top: 16.0, right: 20.0, bottom: 60.0),
     child: Text("Bạn có thường xuyên ghi chép chi tiêu của mình không?",
         textAlign: TextAlign.center,
         style: TextStyle(
