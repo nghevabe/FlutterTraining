@@ -140,6 +140,7 @@ class ItemAnswer extends StatelessWidget {
             child: Image(image: AssetImage(urlImage)),
           ),
           Container(
+            width: 100.0,
             margin: EdgeInsets.only(left: 8.0),
             child: Text(contend,
                 style: TextStyle(
