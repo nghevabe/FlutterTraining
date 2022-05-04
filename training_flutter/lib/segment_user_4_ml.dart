@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'segment_user_3_ml.dart';
 
-class SegmentUser2 extends StatelessWidget {
+class SegmentUser4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -48,16 +48,16 @@ class LoginBody extends StatelessWidget {
         _titleQuestion(),
         ItemAnswer(
             urlImage: "assets/ic_smile_noactive.png",
-            contend: "Ghi chép đầy đủ và thường xuyên"),
+            contend: "Thường xuyên đặt Ngân sách cho các khoản chi tiêu"),
         ItemAnswer(
             urlImage: "assets/ic_smile2_noactive.png",
-            contend: "Có ghi chép, nhưng chưa đầy đủ và thường xuyên"),
+            contend: "Có đặt Ngân sách chi tiêu, nhưng chưa đều đặn"),
         ItemAnswer(
             urlImage: "assets/ic_sad_noactive.png",
-            contend: "Đã nghĩ tới, nhưng chưa thực hiện việc ghi chép"),
+            contend: "Đã biết tới, nhưng chưa đặt Ngân sách chi tiêu bao giờ"),
         ItemAnswer(
             urlImage: "assets/ic_sad2_noactive.png",
-            contend: "Chưa thực hiện việc ghi chép"),
+            contend: "Chưa biết Ngân sách là gì"),
       ],
     );
   }
@@ -78,7 +78,7 @@ Widget _titlePage() {
   return Container(
     alignment: Alignment.center,
     margin: EdgeInsets.only(top: 32.0),
-    child: const Text("Bước 2/5",
+    child: const Text("Bước 4/4",
         style: TextStyle(
           fontSize: 16.0,
           color: Colors.black,
@@ -90,25 +90,11 @@ Widget _titleQuestion() {
   return Container(
     alignment: Alignment.center,
     margin:
-        const EdgeInsets.only(left: 20.0, top: 16.0, right: 20.0, bottom: 60.0),
-    child: Text("Bạn có thường xuyên ghi chép chi tiêu của mình không?",
+    const EdgeInsets.only(left: 20.0, top: 16.0, right: 20.0, bottom: 60.0),
+    child: Text("Bạn có đặt Ngân sách cho các khoản chi tiêu không?",
         textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 24.0,
-          color: HexColor("#1D1D1D"),
-        )),
-  );
-}
-
-Widget _contendQuestion() {
-  return Container(
-    alignment: Alignment.center,
-    margin: EdgeInsets.only(left: 20.0, top: 4.0, right: 20.0, bottom: 28.0),
-    child: Text(
-        "Chọn một mục tiêu quan trọng nhất. Bạn có thể khám phá những mục tiêu khác bất cứ lúc nào.",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 14.0,
           color: HexColor("#1D1D1D"),
         )),
   );
@@ -140,21 +126,22 @@ class ItemAnswer extends StatelessWidget {
               ),
               Expanded(
                   child: Container(
-                margin: EdgeInsets.only(left: 8.0),
-                child: Text(contend,
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      color: HexColor("#444444"),
-                    )),
-              ))
+                    margin: EdgeInsets.only(left: 8.0),
+                    child: Text(contend,
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#444444"),
+                        )),
+                  ))
             ],
           ),
         ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => SegmentUser3()),
-          );
-        });
+        // onTap: () {
+        //   Navigator.push(
+        //     context,
+        //     MaterialPageRoute(builder: (context) => SegmentUser3()),
+        //   );
+        // }
+        );
   }
 }

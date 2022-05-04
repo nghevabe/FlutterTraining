@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-void main() {
-  runApp(SegmentUser3());
-}
+import 'package:money_lover_flutter/segment_user_4_ml.dart';
 
 class SegmentUser3 extends StatelessWidget {
   @override
@@ -50,16 +47,16 @@ class LoginBody extends StatelessWidget {
         _titleQuestion(),
         ItemAnswer(
             urlImage: "assets/ic_smile_noactive.png",
-            contend: "Ghi chép đầy đủ và thường xuyên"),
+            contend: "Có tiết kiệm đều đặn hàng tháng"),
         ItemAnswer(
             urlImage: "assets/ic_smile2_noactive.png",
-            contend: "Có ghi chép, nhưng chưa đầy đủ và thường xuyên"),
+            contend: "Có tiết kiệm, nhưng chưa thường xuyên"),
         ItemAnswer(
             urlImage: "assets/ic_sad_noactive.png",
-            contend: "Đã nghĩ tới, nhưng chưa thực hiện việc ghi chép"),
+            contend: "Đã nghĩ tới, nhưng chưa thực hiện việc tiết kiệm"),
         ItemAnswer(
             urlImage: "assets/ic_sad2_noactive.png",
-            contend: "Chưa thực hiện việc ghi chép"),
+            contend: "Chưa thực hiện việc tiết kiệm"),
       ],
     );
   }
@@ -93,7 +90,7 @@ Widget _titleQuestion() {
     alignment: Alignment.center,
     margin:
     const EdgeInsets.only(left: 20.0, top: 16.0, right: 20.0, bottom: 60.0),
-    child: Text("Bạn có thường xuyên ghi chép chi tiêu của mình không?",
+    child: Text("Hàng tháng bạn có đang tiết kiệm không?",
         textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 24.0,
@@ -125,7 +122,7 @@ class ItemAnswer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector( child: Container(
       alignment: Alignment.center,
       decoration: BoxDecoration(
           border: Border.all(color: HexColor("#E4E4E4"), width: 2.0),
@@ -149,6 +146,12 @@ class ItemAnswer extends StatelessWidget {
           ))
         ],
       ),
-    );
+    ),
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => SegmentUser4()),
+      );
+    });
   }
 }
