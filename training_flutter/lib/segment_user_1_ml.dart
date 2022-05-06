@@ -82,7 +82,7 @@ Widget _titlePage() {
   return Container(
     alignment: Alignment.center,
     margin: EdgeInsets.only(top: 32.0),
-    child: const Text("Bước 1/5",
+    child: const Text("Bước 1/4",
         style: TextStyle(
           fontSize: 16.0,
           color: Colors.black,

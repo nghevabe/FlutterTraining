@@ -72,6 +72,8 @@ flutter:
     - assets/ic_smile2_noactive.png
     - assets/ic_sad_noactive.png
     - assets/ic_sad2_noactive.png
+    - assets/ic_target.png
+    - assets/ic_check_green.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
