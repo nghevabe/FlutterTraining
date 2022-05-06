@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:money_lover_flutter/segment_summary_ml.dart';
 
 import 'segment_user_3_ml.dart';
 
@@ -136,12 +137,12 @@ class ItemAnswer extends StatelessWidget {
             ],
           ),
         ),
-        // onTap: () {
-        //   Navigator.push(
-        //     context,
-        //     MaterialPageRoute(builder: (context) => SegmentUser3()),
-        //   );
-        // }
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => SegmentSummary()),
+          );
+        }
         );
   }
 }
